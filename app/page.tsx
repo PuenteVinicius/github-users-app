@@ -49,7 +49,7 @@ export default function Home() {
         >
           <div className="flex justify-center items-center w-full">
             <input
-              className="text-neutral-50 max-w-lg mx-6"
+              className="bg-stone-950 border border-neutral-100 text-neutral-50 text-sm rounded-lg focus:ring-neutral-500 focus:border-neutral-500 block w-full max-w-lg p-2.5"
               type="text"
               placeholder="Search GitHub users..."
               value={searchQuery}

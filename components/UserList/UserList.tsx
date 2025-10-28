@@ -2,6 +2,7 @@ import React from "react";
 
 import { UserCard } from "../UserCard/UserCard";
 import { GitHubUser } from "../../types/github";
+import { Loading } from "../ui/Loading/Loading";
 
 interface UserListProps {
   users: GitHubUser[];
@@ -15,7 +16,13 @@ export const UserList: React.FC<UserListProps> = ({
   error,
 }) => {
   if (loading) {
-    return <div className="text-neutral-50">Searching GitHub users...</div>;
+    return (
+      <Loading
+        className="flex mt-8 justify-center"
+        show
+        message="Searching GitHub users..."
+      />
+    );
   }
 
   if (error) {

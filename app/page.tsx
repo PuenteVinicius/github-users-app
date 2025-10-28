@@ -59,7 +59,7 @@ export default function Home() {
           </div>
         </form>
         <UserList users={users} loading={loading} error={error} />
-        {totalPages > 1 && users.length > 0 && (
+        {totalPages > 1 && users.length > 0 && !loading && (
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}

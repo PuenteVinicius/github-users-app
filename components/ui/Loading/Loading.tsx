@@ -1,6 +1,16 @@
 import React from "react";
 
-export const Loading = ({ show = false, className = "", message = "" }) =>
+interface LoadingProps {
+  show: boolean;
+  className: string;
+  message: string;
+}
+
+export const Loading = ({
+  show = false,
+  className = "",
+  message = "",
+}: LoadingProps) =>
   show ? (
     <div
       role="status"

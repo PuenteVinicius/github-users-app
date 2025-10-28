@@ -16,6 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html className="bg-stone-950" lang="en">
+      <link
+        rel="shortcut icon"
+        type="image/x-icon"
+        href="https://twenty-icons.com/github.com/128"
+      ></link>
       <body className={inter.className}>{children}</body>
     </html>
   );

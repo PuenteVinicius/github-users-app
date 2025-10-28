@@ -24,7 +24,6 @@ export const Pagination: React.FC<PaginationProps> = ({
   return (
     <div className="flex justify-center items-center">
       <Button
-        variant="secondary"
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
       >
@@ -36,7 +35,6 @@ export const Pagination: React.FC<PaginationProps> = ({
       </span>
 
       <Button
-        variant="secondary"
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
       >

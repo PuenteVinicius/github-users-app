@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { useGitHubSearch } from "../hooks/useGitHubSearch";
-import { Input } from "../components/ui/Input/Input";
 import { UserList } from "../components/UserList/UserList";
 import { Pagination } from "../components/ui/Pagination/Pagination";
 import { useDebounce } from "use-debounce";
@@ -49,7 +48,7 @@ export default function Home() {
           className="flex justify-center items-center w-full"
         >
           <div className="flex justify-center items-center w-full">
-            <Input
+            <input
               className="text-neutral-50 max-w-lg mx-6"
               type="text"
               placeholder="Search GitHub users..."

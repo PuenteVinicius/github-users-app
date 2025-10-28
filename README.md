@@ -23,36 +23,6 @@ Uma aplicação Next.js moderna para buscar e explorar usuários do GitHub com i
 - **HTTP Client**: Fetch API nativo
 - **Linting**: ESLint
 
-## 📦 Estrutura do Projeto
-
-```
-github-users-app/
-├── app/                    # Next.js App Router
-│   ├── globals.css        # Estilos globais e Tailwind
-│   ├── layout.tsx         # Layout principal
-│   ├── page.tsx           # Página inicial
-│   ├── loading.tsx        # Componente de loading
-│   ├── error.tsx          # Tratamento de erros
-│   └── not-found.tsx      # Página 404
-├── components/
-│   ├── ui/                # Componentes de UI reutilizáveis
-│   │   ├── Button/
-│   │   ├── Input/
-│   │   └── Pagination/
-│   ├── UserCard/          # Card de usuário
-│   └── UserList/          # Lista de usuários
-├── hooks/                 # Custom hooks
-│   └── useGitHubSearch.ts
-├── services/              # Serviços de API
-│   └── githubApi.ts
-├── types/                 # Definições TypeScript
-│   └── github.ts
-├── styles/                # Estilos e temas
-├── lib/                   # Configurações e utilitários
-├── .storybook/            # Configuração do Storybook
-└── __tests__/             # Testes e mocks
-```
-
 ## 🎯 Componentes Principais
 
 ### UserCard
@@ -242,36 +212,6 @@ npm run build
 vercel --prod
 ```
 
-### Outras Plataformas
-
-- Netlify
-- AWS Amplify
-- Railway
-- Docker
-
-## 📈 Performance
-
-- Otimização de imagens
-- Code splitting automático
-- Renderização do lado do servidor
-- Cache de API
-- Bundle analysis
-
-## 🤝 Contribuição
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-### Padrões de Código
-
-- Siga o ESLint configurado
-- Escreva testes para novas funcionalidades
-- Atualize o Storybook quando necessário
-- Mantenha a cobertura de testes
-
 ## 📝 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para detalhes.
@@ -286,14 +226,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para de
 - [ ] Autenticação com GitHub para maior rate limit
 - [ ] Cache de resultados
 - [ ] Favoritos locais
-- [ ] Modo offline
 - [ ] Filtros avançados (localização, linguagens, etc.)
-- [ ] Visualização de repositórios do usuário
-
-## 📞 Suporte
-
-Encontrou um problema? [Abra uma issue](https://github.com/seu-usuario/github-users-app/issues) no GitHub.
-
----
-
-Desenvolvido com ❤️ usando Next.js e TypeScript.

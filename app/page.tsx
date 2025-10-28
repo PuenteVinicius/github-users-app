@@ -11,7 +11,8 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [debouncedSearchQuery] = useDebounce(searchQuery, 1200);
-  const { users, loading, error, totalCount, searchUsers } = useGitHubSearch();
+  const { users, loading, error, totalCount, searchUsers, cleanUsers } =
+    useGitHubSearch();
 
   const totalPages = Math.ceil(totalCount / 20);
 
@@ -26,6 +27,9 @@ export default function Home() {
   };
 
   useEffect(() => {
+    if (searchQuery.length === 0) {
+      cleanUsers();
+    }
     if (searchQuery.trim()) {
       handleSearch(1);
     }
@@ -60,7 +64,7 @@ export default function Home() {
           error={error}
           totalCount={totalCount}
         />
-        {totalPages > 1 && (
+        {totalPages > 1 && users.length > 0 && (
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}

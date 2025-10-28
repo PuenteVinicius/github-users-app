@@ -8,6 +8,7 @@ interface UseGitHubSearchReturn {
   error: string | null
   totalCount: number
   searchUsers: (query: string, page?: number) => Promise<void>
+  cleanUsers: () => void;
 }
 
 export const useGitHubSearch = (): UseGitHubSearchReturn => {
@@ -43,11 +44,16 @@ export const useGitHubSearch = (): UseGitHubSearchReturn => {
     }
   }
 
+  const cleanUsers = () => {
+    setUsers([]);
+  }
+
   return {
     users,
     loading,
     error,
     totalCount,
     searchUsers,
+    cleanUsers,
   }
 }

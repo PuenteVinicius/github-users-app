@@ -28,20 +28,22 @@ export const useGitHubSearch = (): UseGitHubSearchReturn => {
     setLoading(true)
     setError(null)
 
-    try {
-      const data: GitHubSearchResponse = await GitHubApiService.searchUsers(
-        query,
-        page
-      )
-      setUsers(data.items)
-      setTotalCount(data.total_count)
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred')
-      setUsers([])
-      setTotalCount(0)
-    } finally {
-      setLoading(false)
-    }
+    setTimeout(async () => {
+      try {
+        const data: GitHubSearchResponse = await GitHubApiService.searchUsers(
+          query,
+          page
+        )
+        setUsers(data.items)
+        setTotalCount(data.total_count)
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'An error occurred')
+        setUsers([])
+        setTotalCount(0)
+      } finally {
+        setLoading(false)
+      }
+    }, 1000)
   }
 
   const cleanUsers = () => {

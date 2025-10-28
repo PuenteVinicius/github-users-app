@@ -7,25 +7,27 @@ interface UserListProps {
   users: GitHubUser[];
   loading: boolean;
   error: string | null;
-  totalCount: number;
 }
 
 export const UserList: React.FC<UserListProps> = ({
   users,
   loading,
   error,
-  totalCount,
 }) => {
   if (loading) {
-    return <div>Searching GitHub users...</div>;
+    return <div className="text-neutral-50">Searching GitHub users...</div>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div className="text-neutral-50">Error: {error}</div>;
   }
 
   if (users.length === 0) {
-    return <div>No users found. Try searching for GitHub users.</div>;
+    return (
+      <div className="text-neutral-50">
+        No users found. Try searching for GitHub users.
+      </div>
+    );
   }
 
   return (

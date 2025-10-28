@@ -14,6 +14,7 @@ const PaginationContainer = styled.div`
   align-items: center;
   gap: 0.5rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const PageInfo = styled.span`

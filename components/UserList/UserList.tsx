@@ -26,14 +26,14 @@ export const UserList: React.FC<UserListProps> = ({
   }
 
   if (error) {
-    return <div className="text-neutral-50">Error: {error}</div>;
+    return <span className="mt-8 text-neutral-50">Error: {error}</span>;
   }
 
   if (users.length === 0) {
     return (
-      <div className="text-neutral-50">
+      <span className="mt-8 text-red-500">
         No users found. Try searching for GitHub users.
-      </div>
+      </span>
     );
   }
 

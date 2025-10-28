@@ -39,7 +39,7 @@ export const UserList: React.FC<UserListProps> = ({
 
   return (
     <div className="flex w-full justify-center">
-      <div className="flex flex-wrap mt-8 justify-center">
+      <div className="flex flex-wrap my-4 justify-center">
         {users.map((user) => (
           <UserCard key={user.id} user={user} />
         ))}

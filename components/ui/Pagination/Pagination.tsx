@@ -8,15 +8,6 @@ interface PaginationProps {
   onPageChange: (page: number) => void;
 }
 
-const PaginationContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-`;
-
 const PageInfo = styled.span`
   font-size: 0.875rem;
   color: #6b7280;
@@ -31,7 +22,7 @@ export const Pagination: React.FC<PaginationProps> = ({
   if (totalPages <= 1) return null;
 
   return (
-    <PaginationContainer>
+    <div className="flex justify-center items-center">
       <Button
         variant="secondary"
         onClick={() => onPageChange(currentPage - 1)}
@@ -40,9 +31,9 @@ export const Pagination: React.FC<PaginationProps> = ({
         Previous
       </Button>
 
-      <PageInfo>
+      <span className="text-sm my-0 mx-4 text-slate-300">
         Page {currentPage} of {totalPages}
-      </PageInfo>
+      </span>
 
       <Button
         variant="secondary"
@@ -51,6 +42,6 @@ export const Pagination: React.FC<PaginationProps> = ({
       >
         Next
       </Button>
-    </PaginationContainer>
+    </div>
   );
 };
